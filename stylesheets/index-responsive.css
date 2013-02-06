@@ -42,6 +42,9 @@
   .hidden-phone {
     display: none !important;
   }
+  header.small > h2 {
+    right: 110px;
+  }
 }
 
 @media (max-width: 520px) {

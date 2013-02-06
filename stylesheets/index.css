@@ -61,7 +61,7 @@ header.small > h2 {
   position: absolute;
   top: 10px;
   left: 170px;
-  right: 110px;
+  right: 300px;
 }
 
 header.small ~ article {
