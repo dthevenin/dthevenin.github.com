@@ -107,3 +107,8 @@
     padding-bottom: 0px;
   }
 }
+@media (max-width: 480px) {
+  header.small > h2 {
+    display: none;
+  }
+}
