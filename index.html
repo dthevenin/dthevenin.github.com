@@ -2,104 +2,104 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
     <script type="text/javascript" src="javascripts/highlight.pack.js"></script> 
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/index.css" media="screen" />
+    <link rel="stylesheet" rev="stylesheet" href="stylesheets/index.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/bender.css" media="screen" />
-    <link rel="stylesheet" href="stylesheets/zenburn.css">
+    <link rel="stylesheet" rev="stylesheet" href="stylesheets/index-responsive.css" media="screen" />
+    <link rel="stylesheet" href="stylesheets/vs.css">
 
     <title>David Thevenin @github</title>
   </head>
 
   <body>
-    <div id="container">
+
+  <header class="small">
+    <h1><a href="#examples" class="">dthevenin</a></h1>
       <div class="inner">
+        <nav>
+          <ul>
+            <li>
+              <a href="#examples" class="">Examples</a>
+            </li>
+          </ul>
+        </nav>
+     </div>
+  </header>
+  
+  <article>
+    <section id="intro">
+      <h2>Welcome to my github page</h2>
+       <br><br>
+       My Main projects:
+       <ul>
+         <li><a href="http://www.vinisketch.com">ViniSketch Designer</a></li>
+         <li><a href="http://vinisketch.github.com/VSToolkit">ViniSketch Toolkit</a></li>
+         <li><a href="http://dthevenin.github.com/Gesture">Gesture.js</a></li>
+         <li><a href="http://www.github.com/dthevenin/Transform">Transform.js</a></li>
+         </ul>
+       <br><br>
+    </section>
 
-        <header>
-          <h1>dthevenin</h1>
-        </header>
-        
-        <br>
-        <br>
-        <br>
+    <hr>
+    <section id="examples">
+      <h2>Examples and demos</h2>
+      <div class="tiles examples">
+        <div class="text green">
+          <span>Pointer plotter</span>
+          <p>
+            Adapted from <a href="https://github.com/borismus/pointer.js/">Borimus pointer</a> and <a href="http://seb.ly/2011/04/multi-touch-game-controller-in-javascripthtml5-for-ipad/">Seb</a>.
+            <br />
+            <i>Pointer events</i>
+            <br />
+            <br />
+            <a href="demos/pointers.html" class="button small">Fullscreen version</a>
+          </p>
+        </div>
+        <div class="text blue">
+          <span>
+            Video game controller
+          </span>
+          <p>
+             Adapted from <a href="https://github.com/borismus/pointer.js/">Borimus pointer</a> and <a href="http://seb.ly/2011/04/multi-touch-game-controller-in-javascripthtml5-for-ipad/">Seb</a>.
+            <br />
+            <i>Multiple Pointers events</i>
+            <br />
+            <br />
+            <a href="demos/control.html" class="button small">Fullscreen version</a>
+          </p>
+        </div>
+        <div class="text pink">
+          <span>
+          Draw
+          </span>
+          <p>
+            A simple drawing application.
+             Adapted from <a href="https://github.com/borismus/pointer.js/">Borimus pointer</a>.
+            <br />
+            <i>
+              Multiple Pointers events
+            </i>
+            <br />
+            <br />
+            <a href="demos/draw.html" class="button small">Fullscreen version</a>
+          </p>
+        </div>
 
-        <section id="main_content">
-          <h3>Welcome to my github page</h3>
-           <br><br>
-           My Main projects:
-           <ul>
-             <li><a href="http://www.vinisketch.com">ViniSketch Designer</a></li>
-             <li><a href="http://vinisketch.github.com/VSToolkit">ViniSketch Toolkit</a></li>
-             <li><a href="http://dthevenin.github.com/Gesture">Gesture.js</a></li>
-             <li><a href="http://www.github.com/dthevenin/Transform">Transform.js</a></li>
-             </ul>
-           <br><br>
-        </section>
-
-        <hr>
-        <section id="main_content">
-          <h3>Examples and demos</h3>
-          <div class="tiles">
-            <div class="text green">
-              <span>Pointer plotter</span>
-              <p>
-                Adapted from <a href="https://github.com/borismus/pointer.js/">Borimus pointer</a> and <a href="http://seb.ly/2011/04/multi-touch-game-controller-in-javascripthtml5-for-ipad/">Seb</a>.
-                <br />
-                <i>Pointer events</i>
-                <br />
-               <a href="demos/pointers.html">Fullscreen version</a>
-              </p>
-            </div>
-            <div class="text blue">
-              <span>
-                Video game controller
-              </span>
-              <p>
-                 Adapted from <a href="https://github.com/borismus/pointer.js/">Borimus pointer</a> and <a href="http://seb.ly/2011/04/multi-touch-game-controller-in-javascripthtml5-for-ipad/">Seb</a>.
-                <br />
-                <i>Multiple Pointers events</i>
-                <br />
-              <!--a hrefexamples/Animations/index.html">Playground</a-->
-              <a href="demos/control.html">Fullscreen version</a>
-              </p>
-            </div>
-            <div class="text pink">
-              <span>
-              Draw
-              </span>
-              <p>
-                A simple drawing application.
-                 Adapted from <a href="https://github.com/borismus/pointer.js/">Borimus pointer</a>.
-                <br />
-                <i>
-                  Multiple Pointers events
-                </i>
-                <br />
-              <!--a hrefexamples/ExtAnimations/index.html">Playground</a-->
-              <a href="demos/draw.html">Fullscreen version</a>
-              </p>
-            </div>
- 
-          </div>
-        </section>
-
-        <hr>
- 
-        <hr
-        <hr>
-        <footer>
-          All my projects <a href="https://github.com/dthevenin">dthevenin</a><br>
-        </footer>
-
-        
       </div>
-    </div>
-    <script type="text/javascript">
-      hljs.tabReplace = '      ';
-      hljs.initHighlightingOnLoad();
-    </script>
+    </section>
+
+    <hr>
+
+  </article>
+  <footer>
+    All my projects <a href="https://github.com/dthevenin">dthevenin</a><br>
+  </footer>
+
+        
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/waypoints.min.js"></script>
+    <script type="text/javascript" src="javascripts/index.js"></script> 
   </body>
 </html>
