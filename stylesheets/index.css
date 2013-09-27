@@ -132,8 +132,13 @@ header nav a {
   display: block;
   font-size: 15px;
   padding: 5px 5px;
-  color: #555;
+  color: white;
 }
+
+header nav a:hover {
+  color: black;
+}
+
 
 section {
 }
