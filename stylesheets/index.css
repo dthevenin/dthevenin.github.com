@@ -143,11 +143,19 @@ header nav a:hover {
 section {
 }
 
-section > h2 {
+section > h1 {
   padding-top: 40px;
+  font-size: 2em;
+  border-bottom: 1px solid #ddd;
+  margin-bottom:10px;
+  font-weight: bold;
+}
+
+section > h2 {
+  padding-top: 30px;
   font-size: 1.7em;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 section > h3 {
