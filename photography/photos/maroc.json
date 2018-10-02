@@ -1,0 +1,33 @@
+{
+  "name": "Maroc",
+  "imagePath": "photos/maroc/",
+  "images": [
+    {
+      "name": "L1000615.jpg"
+    },
+   {
+      "name": "L1000667.jpg"
+    },
+    {
+      "name": "L1000524.jpg"
+    },
+    {
+      "name": "L1000531.jpg"
+    },
+    {
+      "name": "L1000564.jpg"
+    },
+    {
+      "name": "L1000585.jpg"
+    },
+    {
+      "name": "L1000595.jpg"
+    },
+    {
+      "name": "L1000608.jpg"
+    },
+    {
+      "name": "L1000653.jpg"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+﻿{
+  "title": "Grand tournoi de Sumo de Tokyo, du 11 au 24 janvier 2004.Durant les 15 jours de tournoi, les sumotoris font un combat par jour. La journée commence avec les jeunes et amateurs et finit par le combat des plus hauts gradés.",
+  "name": "Sumo",
+  "imagePath": "photos/sumo/",
+  "images": [{
+      "name": "Sumo003.jpg",
+      "caption": "Combat ..."
+    },
+    {
+      "name": "Sumo001.jpg",
+      "caption": "Le signal est donné ils se lancent ! le premier contact : Tachi-ai"
+    },
+    {
+      "name": "Sumo005.jpg",
+      "caption": "L'arbitre fait une cérémonie avant le combat."
+    },
+    {
+      "name": "Sumo007.jpg",
+      "caption": "Il n'y a pas de catégorie !"
+    },
+    {
+      "name": "Sumo002.jpg",
+      "caption": "Sonkyo. Ils s'observent ! L'arbitre n'a pas encore donné le signal autorisant le début du combat."
+    }
+  ]
+}
