@@ -92,6 +92,24 @@ ul.download li {
   text-align: center;
 }
 
+ul.download li a {
+  position: relative;
+}
+
+ul a {
+  hyphens: none;
+}
+
+ul.download li a i {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+ul.download li a span {
+  padding-left: 12px;
+}
+
 ul.download li:hover {
   background-color: #cacfd2;
   color: #ffffff;

@@ -45,20 +45,57 @@
   header.small > h2 {
     right: 110px;
   }
+
+  #main_presentation {
+    margin-top: 0;
+  }
+
+  #main_presentation > section > div:nth-child(1) {
+    position: relative;
+    width: 116px;
+    float: left;
+  }
+
+  #main_presentation > section > div:nth-child(2) {
+    overflow: visible;
+    position: relative;
+    left: 0;
+  }
+  
+  #main_photo {
+    overflow: hidden;
+    height: 150px;
+    width: 100px;
+    margin-top: 0;
+    border: 2px solid #333
+  }
+  
+  #main_photo > img {
+    margin-left: -35px;
+    width: 150px;
+    height: 150px;
+  }
+
+  ul.download {
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.download li {
+    line-height: 40px;
+    margin-top: 5px;
+  }
 }
 
 @media (max-width: 520px) {
   header > h1 {
     float: left;
     font-size: 28px;
-    margin: 5px 0px 0px 35px;
+    margin: 15px 0px 0px 15px;
   }
   
   header > h1::before {
-    width: 18px;
-    height: 21px;
-    margin-bottom: -10px;
-    margin-left: -35px;
+    display: none;
   }
 
   header nav > ul > li > a {
@@ -100,16 +137,25 @@
     text-align: left;
   }
   
-  div.tiles > div > p > a:nth-of-type(2) {
-//    float: right;
-  }
-  
   footer {
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
   }
+
+  #main_presentation h2 {
+    padding-top: 0;
+  }
+
+  .intro-col {
+    width: 100%;
+  }
+
+  .intro-col, .intro-col.double {
+    width: 100%;
+  }
 }
+
 @media (max-width: 480px) {
   header.small > h2 {
     display: none;
