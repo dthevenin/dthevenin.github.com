@@ -1,0 +1,126 @@
+---
+title: VSToolkit
+layout: default
+---
+  <article class="head_intro">
+    <section>
+      <h1>VS Toolkit<small>, the mobile HTML5 toolkit used for VSD</small></h1>
+      <h2>This toolkit was created to easily develop Hybrid Applications for mobile devices<br />
+      <small>For WebApp others solutions exit</small></h2>
+      <img id="example_tablet" src="assets/example_tablet.png"></img>
+      <img id="example_holo" src="assets/example_holo.png"></img>
+      <img id="example_ios7" src="assets/example_ios7.png"></img>
+    </section>
+
+    <section id="intro_menu">
+        <ul>
+          <li class="hidden-phone">
+            <a href="https://github.com/vinisketch/VSToolkit/zipball/master" class="link-active"><i class="fa fa-download"></i>&nbsp;&nbsp;<span>Download</span></a>
+          </li>
+          <li class="hidden-phone">
+            <a href="https://github.com/vinisketch/VSToolkit" target="_" class="link-active"><i class="fa fa-github"></i>&nbsp;&nbsp;<span>Git</span></a>
+          </li>
+        </ul>
+      
+    </section>
+  </article>
+
+  <article class="toolkit-article">
+    <section>
+      <div class="intro-row">
+        <div class="intro-col">
+          <h3>Components</h3>
+          <p>
+            Framework driven by a component approach and based on objects.
+          </p>
+        </div>
+        <div class="intro-col">
+          <h3>For mobile devices</h3>
+          <p>
+            The Toolkit design, was oriented to support embedded devices. <br />
+            It works on a Raspberry PI!
+          </p>
+        </div>
+        <div class="intro-col">
+          <h3>Data flow</h3>
+          <p>
+            Implements one-way reactive data flow which reduces data update
+            and helps development.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="intro-row">
+        <div class="intro-col double">
+          <h3>Scheduling</h3>
+          <p>
+            Events, Callbacks, and "Tasks" are executed into a scheduler, that
+            ensures:
+            <ul>
+            <li>an event generated at 't' will never be managed before an
+            event generated earlier
+            <li>an asynchronous code will be execute ASAP (more quickly than a setTimeout (0))
+            <li>a Dataflow propagation is "atomic" [obviously according the limitations of JS]
+            <ul>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr />      
+  </article>
+  
+  
+  
+  <article class="demo hidden-phone">
+    <script>
+      function changeTheme (value) {
+        var frame = document.getElementById ("demo_theme");
+        theme_window = frame.contentWindow;
+        theme_window.postMessage ("changetheme#" + value, "*");
+      }
+    </script>
+
+    <iframe id="demo_theme"src="/demos/vst/Themes/index.html"></iframe>
+
+    <h1>Customizable</h1>
+    <br />
+    <p>Create your own GUI Components and themes.</p>
+    <br />
+    <p>VSToolkit is provided with "Native like"  or original themes.</p>
+    <br />
+    <h3>Please test some available themes:</h3>
+
+    <ul id="demo_theme_selector">
+      <li onclick="changeTheme('flat')">Flat design</li>
+      <li onclick="changeTheme('pure')">Pure design</li>
+      <li onclick="changeTheme('holo_light')">Android Holo Light</li>
+      <li onclick="changeTheme('holo_dark')">Android Holo Dark</li>
+      <li onclick="changeTheme('ios7')">iOS 7</li>
+      <li onclick="changeTheme('ios')">Original iOS</li>
+      <li onclick="changeTheme('android')">Original Android</li>
+    </ul>
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr />      
+  </article>
+
+  
+  <article>
+
+    <section>© 2009-2015 David Thevenin.
+    <br /><br />
+    </section>
+
+  </article>
+
+<script type="text/javascript">
+  hljs.tabReplace = '      ';
+  hljs.initHighlightingOnLoad();
+</script>
+

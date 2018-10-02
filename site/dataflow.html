@@ -1,0 +1,83 @@
+---
+title: Dataflow
+layout: default
+---
+  <article class="head_intro">
+    <section>
+      <h1>DataFlow</h1>
+      <img id="example_tablet" src="assets/example_tablet.png"></img>
+      <img id="example_holo" src="assets/example_holo.png"></img>
+      <img id="example_ios7" src="assets/example_ios7.png"></img>
+    </section>
+  </article>
+
+  <article class="toolkit-article">
+    <section>
+      <h3>Data flow</h3>
+      <p>
+        In dataflow programming, a program is represented as a graph:
+
+        <ul>
+          <li>nodes represent components of the program: a widget for instance
+          <li>edges represent the path of data exchanged by components
+        </ul>
+
+        A node (component) uses inputs (input properties of the component) to compute
+        the values of outputs (output properties of the component). Whenever input
+        values are modified, the component node computes and updates its output
+        properties.
+        <br/>
+        If the value of the output properties changes as a result of the computation,
+        the new values are propagated to other nodes of the graph through the edges
+        that connect the output of the node to the input of other nodes.
+        <br/>
+        Dataflow programming does not generate side effects and is easy to represent
+        visually.
+        <br/><br/>
+        To simplify algorithm analysis, we introduce a constraint for the dataflow
+        graph: only Directed Acyclic Graphs <a href="http://en.wikipedia.org/wiki/Directed_acyclic_graph">(DAG)</a> are allowed.
+        <br/><br/>
+        Refer to the end of this specification for a discussion on limitations
+        related to this constraint and how to mitigate them.
+      </p>
+    </section>
+
+    <hr />      
+  </article>
+  
+  
+  
+  <article class="demo hidden-phone">
+
+
+    <iframe id="demo_theme" style="height: 520px;" src="demos/dataflow/GoogleNow/index.html"></iframe>
+
+    <h1>Customizable</h1>
+    <br />
+    <p>Create your own GUI Components and themes.</p>
+    <br />
+    <p>VSToolkit is provided with "Native like"  or original themes.</p>
+    <br />
+    <h3>Please test some available themes:</h3>
+
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr />      
+  </article>
+
+  
+  <article>
+
+    <section>© 2009-2015 David Thevenin.
+    <br /><br />
+    </section>
+
+  </article>
+
+<script type="text/javascript">
+  hljs.tabReplace = '      ';
+  hljs.initHighlightingOnLoad();
+</script>

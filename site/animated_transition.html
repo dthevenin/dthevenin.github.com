@@ -1,0 +1,190 @@
+---
+title: Animated Transition
+layout: default
+---
+    <script>
+    function sendDemoMessage (iframe_id, value) {
+      var frame = document.getElementById (iframe_id);
+      theme_window = frame.contentWindow;
+      theme_window.postMessage (value, "*");
+    }
+  </script>
+
+  <article class="toolkit-article">
+    <section>
+      <h2>Transition Animation module</h2><h4>is a set of components and functions that
+      allows the developer to create complexes animations.</h4>
+      This study do not aim to replace CSS Animations.<br/>
+      <p>
+        Its goal is to proposes:
+      <ul>
+        <li>enough expressivity to allow fine tuning animations
+        <li>to animate any kind of component's property (an array, a string, ...)
+        <li>be compatible with ViniSketch PAR and SEQ scheduling
+        <li>be compatible with ViniSketch Dataflow
+        <li>be optimised to run on a mobile devices
+      </ul><br/>
+      The module is based on tree main classes:
+      <ul>
+        <li>Chronometer; a periodical signal (tick) generator
+        <li>Pace; implements a function in the range [0,1] to [0,1]. Useful to implement for instance an EaseIn transformation
+        <li>Trajectory; an component with one input in, and any number of outputs, for transforming an input [0,1] into the value of a component's property
+      </ul><br/>
+      The object model and APIs were strongly influenced by this <a href="https://www.eurocontrol.int/eec/public/standard_page/proj_CARE_INO_II_ANIMS.html">public work</a>.
+      </p>
+    </section>
+
+    <hr />      
+  </article>
+
+  <article style="padding-bottom: 10px;">
+    <iframe id="demo_simple_anim"src="demos/animation/simple/index.html"></iframe>
+    <h1>Simple example</h1>
+    <br />
+    The next graph shows how to animate the size of a view.<br/ >
+    <br />
+    <img src="assets/graphviz/AT_simple_ex.svg" id="AT_simple_ex">
+    <br />
+    <ul>
+    <li>first you create a Chronometer that will control the animation duration
+    <li>and you create a trajectory based on Vector2D class.
+    <li>then you connect the chronometer to the trajectory and the trajectory to the view
+    </ul>
+<pre><code class="javascript">// elements for your animation
+var chrono = new vs.ext.fx.Chronometer ({repeat: 10, duration: 3000}).init ();
+var traj = new vs.ext.fx.Vector2D ({values: [[100, 100], [220, 50], [100, 100]]}).init ();
+var view = new vs.ui.View ({id: "my_view"}).init ();   
+
+// connect your components within the default dataflow
+chrono
+.connect ("tick").to (traj, "tick")
+.connect ("out").to (view, "size");
+
+// build the default dataflow
+this.buildDataflow ();
+
+// start the animation
+chrono.start ();
+</code></pre>      <br />
+    The helper "vs.ext.fx.createTransition" allows to create a full animation
+    with only one call.
+    <hr />
+  </article>
+  
+  <article style="padding-bottom: 10px;">
+    <h1>Attach an animation to a property</h1>
+    <br />
+    This demo shows how to instrument a component property.<br/ >
+    On the property change, the value is animated along a trajectory.<br/ ><br/ >
+    Write (or copy) a text into the textarea.
+    On blur event the text is animated.
+    <br />
+    <br />
+    <iframe id="demo_property_anim" src="demos/animation/StringAnimation/index.html"></iframe>
+<pre><code class="javascript">// options for the animation
+var options = {
+trajectory: new StringTrajectory ().init (),
+duration: 1000
+};
+
+vs.ext.fx.attachTransition (this.label /* component */, "text" /* property name */, options);
+</code></pre>
+    <hr />
+  </article>
+
+  <article class="demo hidden-phone">
+    <h1>Disk</h1>
+    
+    <iframe id="demo_disk"src="demos/animation/disk/index.html"></iframe>
+
+    <br />
+    <p>This demo shows how to use PAR or SEQ to mix animations</p>
+    <br />
+    <br />
+    <p>This demo is based on the Zanimo demo Circles: <a href="https://zanimo.us/">https://zanimo.us/</a></br>
+    Credits @peutetre <a href="https://github.com/peutetre/Zanimo">Zanimo</a><p>
+    <br />
+    <p>Click on following buttons to pause, start or reconfigure the animation.</p>
+    <br />
+    <br />
+    
+    <ul id="demo_theme_selector">
+      <li onclick="sendDemoMessage('demo_disk', 'pause')">Pause</li>
+      <li onclick="sendDemoMessage('demo_disk', 'start')">Start</li>
+      <li onclick="sendDemoMessage('demo_disk', 'seq_anim')">SEQ Animation</li>
+      <li onclick="sendDemoMessage('demo_disk', 'par_anim')">PAR Animation</li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr />      
+  </article>
+
+  <article class="demo hidden-phone">
+    <h1>Newton's cradle</h1>
+
+    <iframe id="demo_cradle"src="demos/animation/cradle/index.html"></iframe>
+
+    <br />
+    <p>This simple demo shows a Newton's cradle, with 2 sequential animations,
+    and a pace that simulates the physics.</p>
+    <br />
+    <br />
+    <p>Click on following buttons to pause or start the animation.</p>
+    <br />
+    <br />
+    
+    <ul id="demo_theme_selector">
+      <li onclick="sendDemoMessage('demo_cradle', 'pause')">Pause</li>
+      <li onclick="sendDemoMessage('demo_cradle', 'start')">Start</li>
+    </ul>
+
+    <br />
+    <br />
+    <br />
+    <hr />      
+
+  </article>
+
+
+  <article class="demo hidden-phone">
+
+    <iframe id="demo_list"src="demos/animation/ThingsList/index.html"></iframe>
+
+    <h1>Thinglist</h1>
+    <br />
+    <p>This more complex demo simulates the Thinglist application.</p>
+    <br />
+    <p>List items opening and the settings menu are animated.</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr />      
+  </article>
+
+<script type="text/javascript">
+  hljs.tabReplace = '      ';
+  hljs.initHighlightingOnLoad();
+</script>

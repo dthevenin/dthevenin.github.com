@@ -1,0 +1,84 @@
+digraph G {
+
+		bgcolor=transparent;
+		
+    rankdir=LR;
+
+    c1 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR>
+    <TD ROWSPAN="4">Chronometer</TD>
+    <TD port="tick_out">tick</TD>
+  </TR>
+</TABLE>> shape=plaintext];
+
+ 
+    t1 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR>
+    <TD port="tick_in">tick</TD>
+    <TD ROWSPAN="4">Vector2D</TD>
+    <TD port="out">out</TD>
+  </TR>
+  <TR><TD>values</TD><TD></TD></TR>
+
+</TABLE>> shape=plaintext];
+
+    v1 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR>
+    <TD port="size">size</TD>
+    <TD ROWSPAN="4">View</TD>
+  </TR>
+</TABLE>> shape=plaintext];
+
+
+   c1:tick_out -> t1:tick_in [arrowtail=dot, dir=both];
+   t1:out -> v1:size [arrowtail=dot, dir=both];
+
+}
+
+    p1 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR>
+    <TD port="tick_in">tick</TD>
+    <TD ROWSPAN="4">Pace</TD>
+    <TD port="tick_out">tick</TD>
+  </TR>
+</TABLE>> shape=plaintext];
+
+   p1:tick_out -> t1:tick_in [arrowtail=dot, dir=both];
+
+    struct3 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR>
+    <TD>a1</TD>
+    <TD ROWSPAN="4">HUHU</TD>
+    <TD>b1</TD>
+  </TR>
+  <TR><TD>a2</TD><TD>b2</TD></TR>
+  <TR><TD>a2</TD><TD port="b2">b2</TD></TR>
+</TABLE>> shape=plaintext];
+
+
+
+
+    Chronometer [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR>
+    <TD ROWSPAN="4">Chronometer</TD>
+    <TD port="b2">in</TD>
+  </TR>
+</TABLE>> shape=plaintext];
+
+
+
+
+    Chronometer [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+  <TR>
+   <TD port="tick_in">tick</TD>
+    <TD ROWSPAN="4">Chronometer</TD>
+    <TD port="tick_out">tick</TD>
+  </TR>
+</TABLE>> shape=plaintext];
