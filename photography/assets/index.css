@@ -38,6 +38,7 @@ body header {
 }
 body header > div {
   flex: 1 1 auto;
+  text-shadow: 1px 1px 1px black;
 }
 body header h2 {
   padding: 0;
@@ -67,6 +68,7 @@ body header > nav > ul {
 body header > nav > ul > * {
   list-style-type: none;
   padding: 5px;
+  text-shadow: 1px 1px 1px black;
 }
 body article {
   /*background-color: green;*/
