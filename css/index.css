@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 
 header > h1::before {
   content: url('../assets/avatar3.png');
@@ -87,7 +90,6 @@ ul.download li {
   padding: 8px;
   color: white;
   text-align: center;
-  padding-right: 25px;
 }
 
 ul.download li:hover {
