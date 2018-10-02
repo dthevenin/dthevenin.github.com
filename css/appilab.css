@@ -602,7 +602,7 @@ p {
   margin-top: 1em;
   padding-bottom: 1em;
   border: none;
-  background: transparent url('/images/hr.png') 50% 0 no-repeat;
+  background: transparent url('/assets/hr.png') 50% 0 no-repeat;
 }*/
 
 .btn.btn-xs [class^="icon-"], .btn.btn-xs [class*=" icon-"] {
