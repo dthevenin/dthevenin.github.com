@@ -71,11 +71,9 @@ body header > nav > ul > * {
   text-shadow: 1px 1px 1px black;
 }
 body article {
-  /*background-color: green;*/
   flex: 1 1 auto;
 }
 body footer {
-  /*background-color: blue;*/
   flex: 0 0 0;
   text-align: right;
   line-height: 1em;
@@ -102,7 +100,6 @@ section.full-screen > .photo {
   transition: opacity ease-in 200ms;
 }
 .slide-show {
-  /*background-color: yellow;*/
   height: 100%;
   width: 100%;
   flex: 1 1 auto;
@@ -112,16 +109,14 @@ section.full-screen > .photo {
 .slide-show .photos {
   position: absolute;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
+  width: 100000px;
+  overflow: hidden;
   transition: transform 0.3s;
 }
 .slide-show .photo {
   display: inline-block;
   height: 100%;
   margin-left: 15px;
-  flex: 1 0 auto;
   opacity: 0;
   transition: opacity ease-in 200ms;
 }
