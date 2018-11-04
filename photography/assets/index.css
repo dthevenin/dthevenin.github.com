@@ -158,4 +158,23 @@ section.full-screen > .photo {
   background-color: black;
 }
 /* Portrait */
+
+@media (max-width: 400px) {
+  body header {
+    padding: 5px;
+  }
+
+  article {
+    padding: 0;
+  }
+}
 /* Landscape */
+
+@media (max-width: 6000px) and (orientation: landscape) {
+
+  article {
+    padding: 0;
+  }
+}
+
+
